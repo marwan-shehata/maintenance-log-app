@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<!--
+  Copyright (c) 2026 Marwan Shehata. All rights reserved.
+  DEMO VERSION - all data shown is fictional sample data.
+  This code may not be copied, modified, or distributed without written permission.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#14181D">
+<title>MaintLog — Breakdown & Maintenance Records</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="manifest" href="data:application/manifest+json;base64,eyJuYW1lIjogIk1haW50TG9nIFx1MjAxNCBCcmVha2Rvd24gUmVjb3JkcyAoRGVtbykiLCAic2hvcnRfbmFtZSI6ICJNYWludExvZyIsICJzdGFydF91cmwiOiAiLiIsICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLCAiYmFja2dyb3VuZF9jb2xvciI6ICIjMTQxODFEIiwgInRoZW1lX2NvbG9yIjogIiMxNDE4MUQiLCAiaWNvbnMiOiBbeyJzcmMiOiAiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFNQUFBQURBQ0FJQUFBRGR2dnRRQUFBS3BrbEVRVlI0MnUyZGFXd1U1eDJIWjJablppOThINndCRzd6QjVRaXdCSU1NSmVVdzFKUzJRQ2tKSklTN1ZWVlY2UUV0VXRPS0ptb0NsUklsVGFXcWxVSUZCR2lBaWtNcFRRZ0dRN2dNTnBlUndjWUdHMThZRzl2NFdPL083czdWRDFRSnRYYTk2L1hNZW5iMjkzeTB4L1k3TzgvODV2OWVZekxWbGtrQUVDNFVQZ0lBZ1FBRUFoQUlRQ0FBSUJDQVFBQUNBUWdFQUFRQ0VBaEFJQUNCQUlCQUFBSUJDQVFnRUFBUUNFQWdBSUVBQkFJUUNBQUlCQ0lOcllWRzFPNXV3WlVJRC90RzI5QTJnQnlxallXUVJoOHlEWUZBVUVkUEdrVlVJS2lqUDQwbzJLTkxJdlpwUnlLQm9JNk9vNGlDUFlnaTdRb0VlM1R2RUFWNzRKQVdCWUk5TWVJUXBqS0E5Z1JDL01ST0NGR3dCdzdoRVFiMDhnaEQvTVJhQ0NHQmdHWUVRdnpFWUFnaGdRQUVBaEFJeExwQUtJQmlzd3hDQWdFSUJDQVFnRUFBQWdFQWdRQUVBaEFJUUNBQUlCQ0FRQUFDQVFnRUFBUUNFQWhBSUFDQkFJQkFBQUlCQ0FRZ0VJQkFBRUFnQUlFQUJBSXhCSTJQSUFLNHZXUjVIVlArZ0Ntdlkrb2ZHNXdjNlhSVFRvNFVSTkpzbE0yc2JHYmxsSGdwSTFuTVNCWXpraVc3VFJpZktkaVNSQWcwQUpyYURYTzJwb1YrL0k0TlBhL01kWWY5NXpaK2tIU3UzQmppd1ZQdC9ORnRIV0g4bFpJcTl0QTU4NGxySmk5UCtqMmdseU43T1pJZ2lJWTJ3ODBhNXRsdkpWcWxjYU9FS2RsODNuamY5QncrM2lKQklDWFpXMlFKVzZENng0Ynp0NDJxTnU5T1BmUGIzZkYzNnBtd2YwT1hpeXFwWWt1cTJKMWZXQ21TR0RkS2VIdGQ5N1N4UEdvZ1piamJTSmRXc1dIS2Q5b3F5Mm8xVEpTSUQ0NE8rOEVmVXdaalR4OGttYWhzcEI5MkdGQkVLeHhDNFZVa2h5K2FWV3FTSUJLdi95M3hyOGVIaVJJUkMwUzNRQ2V2bTFxN0Jud0t4NHJOVG81VXFVbHY3bzgvZWQyRWJueDBJRXJFSjJjSEhFSjdUMXRVYXMrcG04WURYMXFJV0NMcXg0RU9mR25oaFFIRVNYRUZlNitaVnNubTdRZmlZMjJFSXVvRmF1K2hUbHdiUUg4cXZMSXBGRTVjTXpXMEdXSk5JRDBNSk80dHNpNmQ2UW5seUljZGhxSXl0UXFVVHkrSFZKam5qZlBOZDNnZGRuNWtpcGhvbGN4R1dSREpwME9MVDV4VXpTUER2V2E2NWhGZFZzTjB1U2dJRkFsdTNHZHUxek9UUmdjZklObC94cUpTNTBpVWlDdDNnNHdwWkthSmYvbHAxMVI3MzNZYUtObkl5S254VXJhTnlNMzUzeGRsbWJqYlJGK3VORjZ1WkMvY1puMENDWUhVREtIVGxuZC8xTjMvTVY2ZS9OZDV0WHJ2dFMyMHk5UGZOV1pvZWMrV3pteWJFT0l2SkVsaVFxWXdJVlBZVk9EcTVjaVROMHlmbFpwWTdWMHVuVXltSGk4eGRmWUdPWmQvWHdsK1ROZzBCcXQrOGgzZTBPM3B3ekN6dkdJMnQydHo1NkpjRHdRYUZBd3RoNTB1L1pUUExEM1lZZW11WUdwbTIwUkNqMFNaUU4rYkVmQVcvT2RaaXhSWWcydjMyRUFUQzBaR1hqRFZPOGlHOGNIMGVPS2tJTkRRODkwWm50UjQvMlZ3VTd2aFRKbXhueUlwMExlV3p2UWtEUnRzYVIxbkRwSmhoZGVONmoxQUlWRG9qekRpMVhudWZ2cnpmci9lMmtWOUVYaDZZZDBDOStBYkZsVEJMaGUxNXQzazZvYzBCQnBpVnM5MzB3RUsxa3NWYkcyTG55djB5Vm1MRU9BUms1dmplMzYwQWdza1FpbHhLaHZweGR0UzE3K2ZkT2k4dWJsREowT08wWGREREUrVUZ1VjZQaXYxa3lpeVRPd3Jzcno1V3MvL1ZTY0NlZkNjUmRYNElRakNsaVNPR1M3V3RRYlJRcGFKQzdlTkYyNGJuLzZJdzg1UEhzTlB5ZVluanhFU3JCSUVpaERyRjdyOUNrUVF4SkZMNXEwdk9TM0dyeXVTejYrYTJycjlCMjE2b3JSNHVtSWQ0M3lIWjFlaE5mVGpXem9OTGRjTlgwM2RaNldKRGp1Zm0rT2JOZDZYTTFLQVFDb3lQY2MzTVl1dmFQRFRxK3JseUNNWHpXdWZ5WldQQTVmUHI4NEwrRFFNZzQwRjdyMUZWaUhjM25wRG02R2h6WEM4eFBRMG5MNHozYnNrajN2aE9WN2oxeUphK3dYOVBIcjJuZm5hbVBJNnBxeldmKytkTmhDcjU3a1ZiTkxJRkhFd2E3VDdoTk9lVTVZVjc2UXMzcGI2NldXemx0ZW1SYXRBUzJkNkVnTVVEZmViNmVJS05tajhMSjd1U1V0UStNcjgvaFhucERGS1prWlZFNzM1bzRTbGI2VUd1ZzBnVUppWVdIbmxIQzV3Zjk1Q0VNUVRKL1dmRWxQZ1FzcWxlS3VNalB6Ukw3cHlSaWhjd1ZRMjBpOXZUeGxRZ1FXQmdyTW0zMDBGbUw0c0tqTTFkeGdPbmpNSG1zU2VOSnBYYVh1RExVazh1cTFqOEVQYmZSQWw0cDBEY1h0T1dTQ1FZb3hLRmZNRFhDZFJJajQrYmRsL0puRHZmYUZidllaWlRmTE9YM2IrL2ZXdTBla0t6Mzl0UHhnZjlrWVVDT1MzbEE3NEdOcFZhRzNwOU4vRlNob21MY2xUZlZwN1VhNm5jSHY3bjMvU1BYTzhqMVJvTVk4b0VkdjJ4YXUzSVNsV3V2RmY4ZUx6dnVjeWhKcEh0Ti9QT2hDcjVuSkdKaElYZ2FIbFpiTzRaYk80aHNlRzAyV200Z3EycElydGY5bFFVTzQ5cEUvZE5CVk04MEFnWlZpN3dQM1cvZ0VzWlRkUXhKcjU3Z2czTWl0ZDNGVGcybFRnRWlYaVRqMXo0ejV6czRhOVdjTTB0WWN6REhYNG9oa0NLY2FLMmR4N2grTkN2NjBYdnVBWmtUSmtTM01NRkRFbG01K1N6Vy80dHBzZ2lMWnU2c3BkOW5JbGUvcW1xYjBuMUhMaWFqVWp5UVNsalRXdVViL0F3R3FTVjh6bUJsSTJ1YlhUK0xRRWFVbWVaOGVHbmlzZlB0NjlwWFBHTjN5aC9GUzNpNnBwMXNxZHI0Y1ZLdXNXdWtPc1VuTkdDck1tK0RSNENoUkp6SjNzUGZUR2s5K3NjSVp5L09OdUNnSXBodDBteko0WWtoYWFpaCsvL096N3JybVRnNDhoYVdkdG1rN1d5SVV5ckJ4bmxwZC9rOVArdVlUU3lFRjI1U0JRWCtZN3ZKbHBRVXJqbDE3a25sM21vVm15UWhoK05HcG1aa3duQWxFa3NTYS92OGNUU1JKckY3aFViY09hOTVKdktUSGxHVXE2eEprbENLUXdLNy9GbWRpQUFUTm5rbmZNY0hWNzc4VVY3UEszVTM3OFlkTDFlNE9hYmJoY0dYeXIveENPUk9oV29BU3J0Q3p3RHZuMUN5TlVQcCs1Wlh4NVIvSVAzMDQ1Y3NuczhRMjRVbWxzTSt3TDl2b0hBMFVvUHNzR2dmb3JwYlBTeFZDNk5ncFNWc3RzL1VkQzNxL1NmNzB6b2FqTTZQYUdaRkpwRmJ2cVQ4bEJYMzQxYmhTdm5XSk9WN3RNeG1jS3RidGJ0Tk1lSjBjZUt6WWZLell6dER6VnpqdnMvTVFzWVhTNmtKRXN4VnNrRXl2ekF1bmt5UHBXK3RZRHB2Q0dNY1NaOXZrT3IzYk9FZStKamdTOFFGNnRacTlXSzdBU2d5U0paVE0xdEVNZWI2cVBNdklkM3JFakJBZ0V3b0dsNWQrdGNtcXFTUkFvbXZqRGE4NnczeEVEZ1dLZG55L3RWWFlmRWdUU0ZuTW5lMmwxTnJ5YldIbkhocDdOeTNzMWVOYm9oU25HN2kyZFhTNnE4THJ4ODZ1bVN4VkdwWFlERmt6enZMSEtxWjJSUXdpa0lvbFdhZVVjYnVVY3pzbVIxNnJaMG1xMnRJb3RyMlBDMk8vOGRIZno2bmx1VGZXNS9Bd3JwTm95RmZsRm1ockIweFNjajZ4dW91dGE2UWV0aGdjdGRGTzd3Y21SdlJ6cDlwSXVEL1cwYjJVMXljbHhraTFKekxhSjQwWUp1VG0rc1JrQ3FmS1NEZnRHR3hJb0NqQ3pzc1BPTyt5OExzOE9SVFNBUUFBQ0FRZ0VJQkFBRUFoQUlBQ0JBQVFDQUFJQkNBUWdFSUJBQUVBZ0FJRUFCQUlRQ0FBSUJDQVFnRUFBQWdFSUJBQUVBaEFJUUNBQWdRQ0FRQUFDQVFnRUlGQW9LUEt1RUJBeGxMcGVTQ0FBZ1FBRUFoQUlaVkRNRlVCSUlLQXhnUkJDTVJVL1NDQ2dQWUVRUXJFVFAyb2xFQnlLRVh2d0NBTmFGUWdoRkF2eG8yNEN3U0hkMjZQNkl3d082ZHVlU05SQWNFakg5aEFLL3JlZW9PRGYrZWhNblVqM3doQkYrck1ub2dtRUtOTGxqVG9FQWtFalBXWDhrQWtFbWZSUkdHaENJQkM5WUNvRFFDQUFnUUFFQWhBSUFBZ0VJQkNBUUFBQ0FRQ0JBQVFDRUFoQUlBQWdFSUJBQUFJQkNBUUFCQUlRQ0VBZ0FJRUFCQUlnSFA0TDNvZVk2blZIRlJ3QUFBQUFTVVZPUks1Q1lJST0iLCAic2l6ZXMiOiAiMTkyeDE5MiIsICJ0eXBlIjogImltYWdlL3BuZyJ9XX0=">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="MaintLog">
+<meta name="mobile-web-app-capable" content="yes">
+<style>
+  :root{
+    --bg-base:#14181D; --bg-panel:#1B2129; --bg-panel-2:#212934; --line:#2B323C;
+    --amber:#F2A93B; --amber-dim:#7A5A22; --teal:#3FA79A; --teal-dim:#1F4A44;
+    --danger:#E4572E; --danger-dim:#4A241A; --ok:#5FB36C;
+    --text:#EDEAE3; --text-dim:#8B93A0; --text-faint:#5C6472;
+    --font-display:'Space Grotesk',sans-serif; --font-body:'Inter',sans-serif; --font-mono:'IBM Plex Mono',monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{background:var(--bg-base);color:var(--text);font-family:var(--font-body);min-height:100vh;-webkit-tap-highlight-color:transparent;}
+  #app{max-width:680px;margin:0 auto;padding:20px 16px 100px;}
+
+  .header{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:16px;margin-bottom:16px;border-bottom:1px solid var(--line);}
+  .brand-eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;color:var(--text-faint);text-transform:uppercase;margin-bottom:4px;}
+  .brand-title{font-family:var(--font-display);font-weight:700;font-size:26px;letter-spacing:-0.01em;}
+  .conn-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--text-faint);margin-right:6px;vertical-align:middle;}
+  .conn-dot.live{background:var(--ok);}
+  .conn-label{font-family:var(--font-mono);font-size:10.5px;color:var(--text-dim);}
+  .stat-block{text-align:right;}
+  .stat-num{font-family:var(--font-mono);font-size:22px;font-weight:600;line-height:1;}
+  .stat-label{font-size:11px;color:var(--text-dim);margin-top:2px;}
+  .stat-num.warn{color:var(--danger);}
+
+  .toolbar{display:flex;gap:8px;margin-bottom:12px;}
+  .search-input{flex:1;background:var(--bg-panel);border:1px solid var(--line);border-radius:8px;padding:10px 12px;color:var(--text);font-family:var(--font-body);font-size:14px;}
+  .search-input:focus{outline:none;border-color:var(--text-faint);}
+  .add-btn{background:transparent;border:1px solid var(--line);color:var(--text-dim);border-radius:8px;padding:10px 14px;font-family:var(--font-mono);font-size:13px;cursor:pointer;white-space:nowrap;}
+  .add-btn:active{background:var(--bg-panel);}
+  .add-btn.primary{background:var(--amber-dim);color:var(--amber);border-color:var(--amber);}
+
+  .filter-row{display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap;}
+  .filter-chip{background:var(--bg-panel);border:1px solid var(--line);color:var(--text-dim);border-radius:16px;padding:6px 12px;font-family:var(--font-mono);font-size:11px;cursor:pointer;}
+  .filter-chip.active{background:var(--amber-dim);color:var(--amber);border-color:var(--amber);}
+
+  .list-label{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;color:var(--text-faint);text-transform:uppercase;margin:18px 0 8px 2px;}
+  .empty-state{text-align:center;padding:50px 20px;color:var(--text-faint);font-family:var(--font-mono);font-size:13px;border:1px dashed var(--line);border-radius:10px;}
+  .log-card{position:relative;display:flex;align-items:flex-start;gap:12px;background:var(--bg-panel);border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin-bottom:8px;border-left:3px solid var(--line);}
+  .log-card.status-open{border-left-color:var(--danger);}
+  .log-card.status-pending{border-left-color:var(--amber);}
+  .log-card.status-resolved{border-left-color:var(--ok);}
+  .log-info{flex:1;min-width:0;}
+  .log-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;}
+  .log-equip{font-family:var(--font-display);font-weight:600;font-size:15px;}
+  .status-badge{font-family:var(--font-mono);font-size:10px;text-transform:uppercase;letter-spacing:.05em;padding:3px 8px;border-radius:10px;white-space:nowrap;flex-shrink:0;}
+  .status-badge.status-open{background:var(--danger-dim);color:var(--danger);}
+  .status-badge.status-pending{background:var(--amber-dim);color:var(--amber);}
+  .status-badge.status-resolved{background:var(--teal-dim);color:var(--teal);}
+  .log-problem{font-size:13px;color:var(--text);margin:4px 0 2px;}
+  .log-meta{font-family:var(--font-mono);font-size:11px;color:var(--text-dim);display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;margin-top:4px;}
+  .log-edit{background:none;border:none;color:var(--text-faint);font-size:16px;cursor:pointer;padding:4px 2px;flex-shrink:0;}
+
+  .overlay{position:fixed;inset:0;background:rgba(10,12,15,.92);z-index:50;display:flex;align-items:center;justify-content:center;padding:16px;}
+  .hidden{display:none !important;}
+  .modal{background:var(--bg-panel);border:1px solid var(--line);border-radius:14px;width:100%;max-width:460px;padding:22px;max-height:90vh;overflow-y:auto;}
+  .modal.wide{max-width:620px;}
+  .modal-title{font-family:var(--font-display);font-weight:700;font-size:18px;margin-bottom:16px;}
+  .field{margin-bottom:14px;}
+  .field label{display:block;font-family:var(--font-mono);font-size:11px;color:var(--text-dim);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;}
+  .field input, .field select, .field textarea{width:100%;background:var(--bg-panel-2);border:1px solid var(--line);border-radius:7px;padding:10px 12px;color:var(--text);font-family:var(--font-body);font-size:14px;}
+  .field textarea{resize:vertical;min-height:60px;}
+  .field input:focus, .field select:focus, .field textarea:focus{outline:none;border-color:var(--text-faint);}
+  .field input.field-missing, .field select.field-missing{border-color:var(--danger);}
+  .field-row{display:flex;gap:10px;}
+  .field-row .field{flex:1;}
+  .spare-part-row{display:flex;gap:6px;margin-bottom:6px;align-items:center;}
+  .spare-part-row input{background:var(--bg-panel-2);border:1px solid var(--line);border-radius:7px;padding:9px 10px;color:var(--text);font-family:var(--font-body);font-size:13px;}
+  .spare-part-row .spare-name{flex:2;min-width:0;}
+  .spare-part-row .spare-partnumber{flex:1;min-width:0;font-family:var(--font-mono);}
+  .spare-part-row .spare-qty{width:56px;flex-shrink:0;}
+  .spare-part-row .spare-remove{background:none;border:1px solid var(--line);color:var(--danger);border-radius:6px;padding:8px 10px;cursor:pointer;flex-shrink:0;}
+  .modal-actions{display:flex;gap:10px;margin-top:18px;}
+  .btn{flex:1;padding:12px;border-radius:8px;border:none;font-family:var(--font-display);font-weight:600;font-size:14px;cursor:pointer;}
+  .btn-primary{background:var(--amber);color:#1B140A;}
+  .btn-ghost{background:transparent;border:1px solid var(--line);color:var(--text-dim);}
+  .btn-danger{background:var(--danger-dim);color:var(--danger);border:1px solid var(--danger);}
+
+  .sync-note{font-family:var(--font-mono);font-size:10.5px;color:var(--text-faint);text-align:center;margin-top:22px;line-height:1.6;padding:0 20px;}
+  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--bg-panel-2);border:1px solid var(--line);color:var(--text);padding:10px 18px;border-radius:20px;font-family:var(--font-mono);font-size:12.5px;z-index:80;opacity:0;transition:opacity .25s ease;pointer-events:none;max-width:90vw;text-align:center;}
+  .toast.show{opacity:1;}
+</style>
+</head>
+<body>
+
+<div id="app">
+  <div class="header">
+    <div>
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNTAiIGhlaWdodD0iMzQiIHZpZXdCb3g9IjAgMCAxNTAgMzQiPjxyZWN0IHdpZHRoPSIzNCIgaGVpZ2h0PSIzNCIgcng9IjYiIGZpbGw9IiNGMkI3MDUiLz48dGV4dCB4PSIxNyIgeT0iMjMiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iNzAwIiBmb250LXNpemU9IjE1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTQxODFEIj5NUzwvdGV4dD48dGV4dCB4PSI0NCIgeT0iMjMiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXdlaWdodD0iNzAwIiBmb250LXNpemU9IjE2IiBmaWxsPSIjRThFQUVEIj5ERU1PIENPLjwvdGV4dD48L3N2Zz4=" alt="Demo Co." style="height:34px;margin-bottom:6px;display:block;">
+      <div class="brand-eyebrow">Breakdown &amp; Maintenance Records</div>
+      <div class="brand-title">MaintLog</div>
+      <div style="margin-top:6px;"><span class="conn-dot" id="connDot"></span><span class="conn-label" id="connLabel">Connecting...</span></div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num" id="statTotal">0</div>
+      <div class="stat-label">total records</div>
+      <div class="stat-num warn" id="statOpen" style="margin-top:6px;">0</div>
+      <div class="stat-label">open / pending</div>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <input class="search-input" id="searchInput" placeholder="Search equipment, serial, site, problem, technician..." oninput="renderList()">
+  </div>
+  <div class="toolbar">
+    <button class="add-btn" style="flex:1;" onclick="exportLogCSV()">⬇ Export Excel</button>
+    <button class="add-btn primary" style="flex:1;" onclick="openAddModal()">+ Record</button>
+  </div>
+
+  <div class="filter-row">
+    <button class="filter-chip active" data-status="all" onclick="setStatusFilter('all')">All</button>
+    <button class="filter-chip" data-status="Open" onclick="setStatusFilter('Open')">Open</button>
+    <button class="filter-chip" data-status="Pending Parts" onclick="setStatusFilter('Pending Parts')">Pending Parts</button>
+    <button class="filter-chip" data-status="Resolved" onclick="setStatusFilter('Resolved')">Resolved</button>
+  </div>
+
+  <div id="importBanner"></div>
+
+  <div class="list-label">Records</div>
+  <div id="listContainer"></div>
+
+  <div class="sync-note">Demo version with fictional sample data. Connected to a Firebase project — free, and synced live between every device that opens this link.</div>
+</div>
+
+<div class="overlay hidden" id="itemModalOverlay">
+  <div class="modal">
+    <div class="modal-title" id="itemModalTitle">Add Breakdown Record</div>
+
+    <div class="field-row">
+      <div class="field">
+        <label>Equipment</label>
+        <input type="text" id="fEquipment" placeholder="e.g. Drilling Rig DR-200, Generator G-01">
+      </div>
+      <div class="field">
+        <label>Serial No / Unit #</label>
+        <input type="text" id="fSerialNo" placeholder="e.g. 110">
+      </div>
+    </div>
+    <div class="field">
+      <label>Working Site</label>
+      <input type="text" id="fSite" placeholder="e.g. AD, WORKSHOP, AZIZI">
+    </div>
+    <div class="field">
+      <label>Problem</label>
+      <textarea id="fProblem" placeholder="Describe the breakdown/issue"></textarea>
+    </div>
+    <div class="field">
+      <label>Action Taken</label>
+      <textarea id="fAction" placeholder="What was done to fix it"></textarea>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Status</label>
+        <select id="fStatus">
+          <option value="Open">Open</option>
+          <option value="Pending Parts">Pending Parts</option>
+          <option value="Resolved">Resolved</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Technician</label>
+        <input type="text" id="fTechnician" placeholder="Who worked on it">
+      </div>
+    </div>
+    <div class="field">
+      <label>Required Spare Part</label>
+      <input type="text" id="fRequiredSparePart" placeholder="If waiting on parts">
+    </div>
+    <div class="field">
+      <label>Spare Parts Used</label>
+      <div id="sparePartsContainer"></div>
+      <button type="button" class="add-btn" style="width:100%;margin-top:2px;" onclick="addSparePartRow()">+ Add Spare Part</button>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Price (AED)</label>
+        <input type="number" id="fPrice" placeholder="0.00" min="0" step="0.01">
+      </div>
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label>Start</label>
+        <input type="datetime-local" id="fStartDateTime" onchange="recalcDowntime()">
+      </div>
+      <div class="field">
+        <label>End</label>
+        <input type="datetime-local" id="fEndDateTime" onchange="recalcDowntime()">
+      </div>
+    </div>
+    <div class="field">
+      <label>Downtime (hours) — auto-calculated if both dates are set, or enter manually</label>
+      <input type="number" id="fDowntimeHours" placeholder="0" min="0" step="0.5">
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeItemModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveItemFromModal()">Save</button>
+    </div>
+    <div class="modal-actions" id="deleteRow" style="display:none;">
+      <button class="btn btn-danger" onclick="deleteCurrentItem()">Delete record</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import {
+  getFirestore, collection, doc, setDoc, updateDoc, deleteDoc,
+  onSnapshot, serverTimestamp, addDoc, query, orderBy, getDocs, writeBatch
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+  // DEMO: paste the config of a SEPARATE demo Firebase project here (never the real one)
+  apiKey: "PASTE_DEMO_API_KEY",
+  authDomain: "PASTE_DEMO_PROJECT.firebaseapp.com",
+  projectId: "PASTE_DEMO_PROJECT",
+  storageBucket: "PASTE_DEMO_PROJECT.firebasestorage.app",
+  messagingSenderId: "PASTE_DEMO_SENDER_ID",
+  appId: "PASTE_DEMO_APP_ID"
+};
+
+const fbApp = initializeApp(firebaseConfig);
+const db = getFirestore(fbApp);
+const auth = getAuth(fbApp);
+const logsCol = collection(db, "maintenance_logs");
+
+window.__db = db;
+window.__logsCol = logsCol;
+window.__fs = { doc, setDoc, updateDoc, deleteDoc, addDoc, collection, query, orderBy, getDocs, serverTimestamp, writeBatch };
+
+signInAnonymously(auth).catch((err) => {
+  console.error("Anonymous sign-in failed — check that Anonymous auth is enabled in Firebase Console:", err);
+  const lbl = document.getElementById('connLabel');
+  if (lbl) lbl.textContent = 'Connection failed — check Firebase Auth settings';
+});
+
+onSnapshot(logsCol, (snap) => {
+  window.logs = [];
+  snap.forEach(d => window.logs.push({ id: d.id, ...d.data() }));
+  document.getElementById('connDot').classList.add('live');
+  document.getElementById('connLabel').textContent = 'Live — synced';
+  if (window.renderList) window.renderList();
+  if (window.checkImportBanner) window.checkImportBanner();
+}, (err) => {
+  document.getElementById('connLabel').textContent = 'Connection error';
+  console.error(err);
+});
+</script>
+
+<script>
+window.__HISTORICAL_RECORDS__ = [{"equipment": "Drilling Rig DR-300", "serialNo": "DR-02-350", "site": "Site Bravo", "problem": "Engine not starting", "action": "Replaced starter relay and tested", "requiredSparePart": "", "changedSparePart": "Starter relay", "partNumber": "SR-1020", "price": 85.0, "monthLabel": "July 2026", "status": "Resolved", "technician": "Technician A", "downtimeHours": 0.0}, {"equipment": "Water Pump WP-50", "serialNo": "WP-01-132", "site": "Site Alpha", "problem": "Hydraulic pressure low", "action": "Adjusted relief valve, topped up oil", "requiredSparePart": "", "changedSparePart": "", "partNumber": "", "price": 0.0, "monthLabel": "July 2026", "status": "Resolved", "technician": "Technician A", "downtimeHours": 2.7}, {"equipment": "Distribution Panel DP-3", "serialNo": "DP-03-833", "site": "Workshop", "problem": "Engine not starting", "action": "Replaced starter relay and tested", "requiredSparePart": "", "changedSparePart": "Starter relay", "partNumber": "SR-1020", "price": 85.0, "monthLabel": "July 2026", "status": "Resolved", "technician": "Technician B", "downtimeHours": 2.5}, {"equipment": "Generator G-500 kVA", "serialNo": "G-01-263", "site": "Site Delta", "problem": "Engine not starting", "action": "Replaced starter relay and tested", "requiredSparePart": "", "changedSparePart": "Starter relay", "partNumber": "SR-1020", "price": 85.0, "monthLabel": "July 2026", "status": "Resolved", "technician": "Technician B", "downtimeHours": 4.2}, {"equipment": "Generator G-250 kVA", "serialNo": "G-02-199", "site": "Site Charlie", "problem": "Hydraulic pressure low", "action": "Adjusted relief valve, topped up oil", "requiredSparePart": "", "changedSparePart": "", "partNumber": "", "price": 0.0, "monthLabel": "July 2026", "status": "Resolved", "technician": "Technician B", "downtimeHours": 4.0}, {"equipment": "Power Pack PP-650", "serialNo": "PP-02-487", "site": "Site Alpha", "problem": "Proximity sensor damaged", "action": "Replaced 2 proximity sensors", "requiredSparePart": "", "changedSparePart": "Proximity sensor M18", "partNumber": "PX-1800", "price": 95.0, "monthLabel": "July 2026", "status": "Resolved", "technician": "Technician C", "downtimeHours": 4.8}, {"equipment": "Distribution Panel DP-3", "serialNo": "DP-03-821", "site": "Site Alpha", "problem": "Oil cooling fan not working", "action": "Replaced fan motor fuse and checked wiring", "requiredSparePart": "", "changedSparePart": "Fuse 30A", "partNumber": "FU-0030", "price": 5.0, "monthLabel": "July 2026", "status": "Resolved", "technician": "Technician A", "downtimeHours": 2.5}, {"equipment": "Drilling Rig DR-300", "serialNo": "DR-02-489", "site": "Site Charlie", "problem": "Fuel level sensor reading wrong", "action": "", "requiredSparePart": "Fuel level sensor", "changedSparePart": "", "partNumber": "FS-0210", "price": 120.0, "monthLabel": "July 2026", "status": "Open", "technician": "Technician B", "downtimeHours": 6.2}, {"equipment": "Generator G-250 kVA", "serialNo": "G-02-818", "site": "Site Alpha", "problem": "Fuel level sensor reading wrong", "action": "Replaced fuel level sensor", "requiredSparePart": "", "changedSparePart": "Fuel level sensor", "partNumber": "FS-0210", "price": 120.0, "monthLabel": "July 2026", "status": "Resolved", "technician": "Technician C", "downtimeHours": 1.0}, {"equipment": "Vibro Hammer VH-12", "serialNo": "VH-01-376", "site": "Workshop", "problem": "Remote control not responding", "action": "Repaired loose connector in remote", "requiredSparePart": "", "changedSparePart": "Connector 16 pin", "partNumber": "CN-1600", "price": 40.0, "monthLabel": "July 2026", "status": "Resolved", "technician": "Technician A", "downtimeHours": 6.8}, {"equipment": "Drilling Rig DR-200", "serialNo": "DR-01-924", "site": "Site Charlie", "problem": "Fuel level sensor reading wrong", "action": "", "requiredSparePart": "Fuel level sensor", "changedSparePart": "", "partNumber": "FS-0210", "price": 120.0, "monthLabel": "July 2026", "status": "Open", "technician": "Technician B", "downtimeHours": 4.0}, {"equipment": "Distribution Panel DP-3", "serialNo": "DP-03-771", "site": "Site Delta", "problem": "Breaker tripping under load", "action": "Replaced 63A breaker", "requiredSparePart": "", "changedSparePart": "MCB 63A", "partNumber": "CB-0063", "price": 110.0, "monthLabel": "July 2026", "status": "Resolved", "technician": "Technician B", "downtimeHours": 12.1}, {"equipment": "Crawler Crane CC-80", "serialNo": "CR-01-651", "site": "Site Charlie", "problem": "Fuel level sensor reading wrong", "action": "Replaced fuel level sensor", "requiredSparePart": "", "changedSparePart": "Fuel level sensor", "partNumber": "FS-0210", "price": 120.0, "monthLabel": "August 2026", "status": "Resolved", "technician": "Technician C", "downtimeHours": 8.0}, {"equipment": "Power Pack PP-400", "serialNo": "PP-01-241", "site": "Workshop", "problem": "Oil cooling fan not working", "action": "Replaced fan motor fuse and checked wiring", "requiredSparePart": "", "changedSparePart": "Fuse 30A", "partNumber": "FU-0030", "price": 5.0, "monthLabel": "August 2026", "status": "Resolved", "technician": "Technician B", "downtimeHours": 0.8}, {"equipment": "Drilling Rig DR-300", "serialNo": "DR-02-911", "site": "Site Delta", "problem": "Remote control not responding", "action": "Repaired loose connector in remote", "requiredSparePart": "", "changedSparePart": "Connector 16 pin", "partNumber": "CN-1600", "price": 40.0, "monthLabel": "August 2026", "status": "Resolved", "technician": "Technician C", "downtimeHours": 0.0}, {"equipment": "Distribution Panel DP-3", "serialNo": "DP-03-666", "site": "Site Alpha", "problem": "Gauges not working on panel", "action": "Fixed ground wire on instrument cluster", "requiredSparePart": "", "changedSparePart": "", "partNumber": "", "price": 0.0, "monthLabel": "August 2026", "status": "Resolved", "technician": "Technician C", "downtimeHours": 0.7}, {"equipment": "Water Pump WP-50", "serialNo": "WP-01-448", "site": "Site Alpha", "problem": "Battery cutoff switch failed", "action": "Installed new battery cutoff switch", "requiredSparePart": "", "changedSparePart": "Battery cutoff switch", "partNumber": "BC-0450", "price": 60.0, "monthLabel": "August 2026", "status": "Resolved", "technician": "Technician B", "downtimeHours": 8.0}, {"equipment": "Drilling Rig DR-200", "serialNo": "DR-01-369", "site": "Workshop", "problem": "Breaker tripping under load", "action": "", "requiredSparePart": "MCB 63A", "changedSparePart": "", "partNumber": "CB-0063", "price": 110.0, "monthLabel": "August 2026", "status": "Open", "technician": "Technician A", "downtimeHours": 0.9}, {"equipment": "Generator G-500 kVA", "serialNo": "G-01-303", "site": "Site Bravo", "problem": "Overheating alarm", "action": "Cleaned radiator and replaced thermostat", "requiredSparePart": "", "changedSparePart": "Thermostat", "partNumber": "TH-0082", "price": 70.0, "monthLabel": "August 2026", "status": "Resolved", "technician": "Technician B", "downtimeHours": 1.0}, {"equipment": "Water Pump WP-50", "serialNo": "WP-01-600", "site": "Site Alpha", "problem": "Engine not starting", "action": "Replaced starter relay and tested", "requiredSparePart": "", "changedSparePart": "Starter relay", "partNumber": "SR-1020", "price": 85.0, "monthLabel": "August 2026", "status": "Resolved", "technician": "Technician A", "downtimeHours": 6.9}, {"equipment": "Generator G-500 kVA", "serialNo": "G-01-999", "site": "Workshop", "problem": "Fuel level sensor reading wrong", "action": "Replaced fuel level sensor", "requiredSparePart": "", "changedSparePart": "Fuel level sensor", "partNumber": "FS-0210", "price": 120.0, "monthLabel": "August 2026", "status": "Resolved", "technician": "Technician A", "downtimeHours": 0.0}, {"equipment": "Drilling Rig DR-300", "serialNo": "DR-02-231", "site": "Site Delta", "problem": "Proximity sensor damaged", "action": "Replaced 2 proximity sensors", "requiredSparePart": "", "changedSparePart": "Proximity sensor M18", "partNumber": "PX-1800", "price": 95.0, "monthLabel": "August 2026", "status": "Resolved", "technician": "Technician C", "downtimeHours": 1.3}, {"equipment": "Distribution Panel DP-3", "serialNo": "DP-03-652", "site": "Site Bravo", "problem": "Inclination sensor fault", "action": "", "requiredSparePart": "", "changedSparePart": "", "partNumber": "", "price": 0.0, "monthLabel": "August 2026", "status": "Pending Parts", "technician": "Technician C", "downtimeHours": 4.0}, {"equipment": "Generator G-250 kVA", "serialNo": "G-02-562", "site": "Site Alpha", "problem": "Gauges not working on panel", "action": "", "requiredSparePart": "", "changedSparePart": "", "partNumber": "", "price": 0.0, "monthLabel": "August 2026", "status": "Open", "technician": "Technician A", "downtimeHours": 2.6}, {"equipment": "Drilling Rig DR-200", "serialNo": "DR-01-702", "site": "Site Bravo", "problem": "Main limit switch not working", "action": "Tightened loose terminal, repaired", "requiredSparePart": "", "changedSparePart": "", "partNumber": "", "price": 0.0, "monthLabel": "September 2026", "status": "Resolved", "technician": "Technician A", "downtimeHours": 0.0}, {"equipment": "Drilling Rig DR-200", "serialNo": "DR-01-132", "site": "Site Charlie", "problem": "Fuel level sensor reading wrong", "action": "Replaced fuel level sensor", "requiredSparePart": "", "changedSparePart": "Fuel level sensor", "partNumber": "FS-0210", "price": 120.0, "monthLabel": "September 2026", "status": "Resolved", "technician": "Technician A", "downtimeHours": 2.8}, {"equipment": "Power Pack PP-650", "serialNo": "PP-02-840", "site": "Workshop", "problem": "Fuel level sensor reading wrong", "action": "Replaced fuel level sensor", "requiredSparePart": "", "changedSparePart": "Fuel level sensor", "partNumber": "FS-0210", "price": 120.0, "monthLabel": "September 2026", "status": "Resolved", "technician": "Technician C", "downtimeHours": 12.0}, {"equipment": "Power Pack PP-650", "serialNo": "PP-02-199", "site": "Site Delta", "problem": "Inclination sensor fault", "action": "Recalibrated inclination sensor", "requiredSparePart": "", "changedSparePart": "", "partNumber": "", "price": 0.0, "monthLabel": "September 2026", "status": "Resolved", "technician": "Technician B", "downtimeHours": 8.4}, {"equipment": "Drilling Rig DR-200", "serialNo": "DR-01-761", "site": "Site Alpha", "problem": "Overheating alarm", "action": "Cleaned radiator and replaced thermostat", "requiredSparePart": "", "changedSparePart": "Thermostat", "partNumber": "TH-0082", "price": 70.0, "monthLabel": "September 2026", "status": "Resolved", "technician": "Technician A", "downtimeHours": 8.0}, {"equipment": "Drilling Rig DR-300", "serialNo": "DR-02-649", "site": "Site Delta", "problem": "Fuel level sensor reading wrong", "action": "Replaced fuel level sensor", "requiredSparePart": "", "changedSparePart": "Fuel level sensor", "partNumber": "FS-0210", "price": 120.0, "monthLabel": "September 2026", "status": "Resolved", "technician": "Technician A", "downtimeHours": 8.2}, {"equipment": "Power Pack PP-650", "serialNo": "PP-02-177", "site": "Site Delta", "problem": "Fuel level sensor reading wrong", "action": "", "requiredSparePart": "Fuel level sensor", "changedSparePart": "", "partNumber": "FS-0210", "price": 120.0, "monthLabel": "September 2026", "status": "Open", "technician": "Technician C", "downtimeHours": 0.0}, {"equipment": "Water Pump WP-50", "serialNo": "WP-01-871", "site": "Site Bravo", "problem": "Engine not starting", "action": "", "requiredSparePart": "Starter relay", "changedSparePart": "", "partNumber": "SR-1020", "price": 85.0, "monthLabel": "September 2026", "status": "Pending Parts", "technician": "Technician A", "downtimeHours": 8.5}, {"equipment": "Vibro Hammer VH-12", "serialNo": "VH-01-268", "site": "Site Delta", "problem": "Inclination sensor fault", "action": "", "requiredSparePart": "", "changedSparePart": "", "partNumber": "", "price": 0.0, "monthLabel": "September 2026", "status": "Pending Parts", "technician": "Technician A", "downtimeHours": 8.0}, {"equipment": "Power Pack PP-650", "serialNo": "PP-02-848", "site": "Workshop", "problem": "Battery cutoff switch failed", "action": "Installed new battery cutoff switch", "requiredSparePart": "", "changedSparePart": "Battery cutoff switch", "partNumber": "BC-0450", "price": 60.0, "monthLabel": "September 2026", "status": "Resolved", "technician": "Technician C", "downtimeHours": 12.2}, {"equipment": "Generator G-500 kVA", "serialNo": "G-01-693", "site": "Workshop", "problem": "Fuel level sensor reading wrong", "action": "", "requiredSparePart": "Fuel level sensor", "changedSparePart": "", "partNumber": "FS-0210", "price": 120.0, "monthLabel": "September 2026", "status": "Pending Parts", "technician": "Technician A", "downtimeHours": 6.0}, {"equipment": "Distribution Panel DP-3", "serialNo": "DP-03-973", "site": "Workshop", "problem": "Gauges not working on panel", "action": "Fixed ground wire on instrument cluster", "requiredSparePart": "", "changedSparePart": "", "partNumber": "", "price": 0.0, "monthLabel": "September 2026", "status": "Resolved", "technician": "Technician A", "downtimeHours": 1.0}];
+
+let logs = [];
+let editingId = null;
+let statusFilter = 'all';
+
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function statusClass(status){
+  if(status === 'Open') return 'status-open';
+  if(status === 'Pending Parts') return 'status-pending';
+  return 'status-resolved';
+}
+
+function setStatusFilter(s){
+  statusFilter = s;
+  document.querySelectorAll('.filter-chip').forEach(el => el.classList.toggle('active', el.dataset.status === s));
+  renderList();
+}
+window.setStatusFilter = setStatusFilter;
+
+function renderList(){
+  logs = window.logs || [];
+  const q = document.getElementById('searchInput').value.trim().toLowerCase();
+  let filtered = logs.filter(it =>
+    (it.equipment||'').toLowerCase().includes(q) ||
+    (it.serialNo||'').toLowerCase().includes(q) ||
+    (it.site||'').toLowerCase().includes(q) ||
+    (it.problem||'').toLowerCase().includes(q) ||
+    (it.technician||'').toLowerCase().includes(q) ||
+    (it.partNumber||'').toLowerCase().includes(q)
+  );
+  if(statusFilter !== 'all'){
+    filtered = filtered.filter(it => (it.status||'Resolved') === statusFilter);
+  }
+
+  filtered.sort((a,b) => {
+    const ta = a.timestamp && a.timestamp.toMillis ? a.timestamp.toMillis() : 0;
+    const tb = b.timestamp && b.timestamp.toMillis ? b.timestamp.toMillis() : 0;
+    return tb - ta;
+  });
+
+  const container = document.getElementById('listContainer');
+  if(filtered.length === 0){
+    container.innerHTML = q
+      ? `<div class="empty-state">⚠ No records match "${escapeHtml(q)}".</div>`
+      : `<div class="empty-state">No records yet. Add one, or import your historical log below.</div>`;
+  } else {
+    container.innerHTML = filtered.map(it => {
+      const sc = statusClass(it.status || 'Resolved');
+      const dateStr = it.timestamp && it.timestamp.toDate ? it.timestamp.toDate().toLocaleDateString() : (it.monthLabel || '—');
+      const endStr = it.endTimestamp && it.endTimestamp.toDate ? ' → '+it.endTimestamp.toDate().toLocaleDateString() : '';
+      const partsSummary = sparePartsSummary(it.spareParts) || it.changedSparePart || '';
+      return `
+      <div class="log-card ${sc}">
+        <div class="log-info">
+          <div class="log-top">
+            <div class="log-equip">${escapeHtml(it.equipment || '')}${it.serialNo ? ' #'+escapeHtml(it.serialNo) : ''}</div>
+            <span class="status-badge ${sc}">${escapeHtml(it.status || 'Resolved')}</span>
+          </div>
+          <div class="log-problem">${escapeHtml(it.problem || '')}</div>
+          ${partsSummary ? `<div class="log-meta" style="color:var(--text-dim);">🔧 ${escapeHtml(partsSummary)}</div>` : ''}
+          <div class="log-meta">${it.site ? '📍 '+escapeHtml(it.site) : ''} ${dateStr ? '· '+dateStr+endStr : ''}${it.technician ? ' · '+escapeHtml(it.technician) : ''}${it.downtimeHours ? ' · '+it.downtimeHours+'h down' : ''}${it.price ? ' · AED '+Number(it.price).toFixed(2) : ''}</div>
+        </div>
+        <button class="log-edit" onclick="openEditModal('${it.id}')">✎</button>
+      </div>`;
+    }).join('');
+  }
+
+  document.getElementById('statTotal').textContent = logs.length;
+  document.getElementById('statOpen').textContent = logs.filter(it => (it.status||'Resolved') !== 'Resolved').length;
+}
+window.renderList = renderList;
+
+function clearFieldErrors(){
+  ['fEquipment','fSerialNo','fSite','fProblem','fTechnician'].forEach(id => {
+    const el = document.getElementById(id);
+    if(el) el.classList.remove('field-missing');
+  });
+}
+
+function openAddModal(){
+  editingId = null;
+  document.getElementById('itemModalTitle').textContent = 'Add Breakdown Record';
+  clearFieldErrors();
+  document.getElementById('fEquipment').value = '';
+  document.getElementById('fSerialNo').value = '';
+  document.getElementById('fSite').value = '';
+  document.getElementById('fProblem').value = '';
+  document.getElementById('fAction').value = '';
+  document.getElementById('fStatus').value = 'Open';
+  document.getElementById('fTechnician').value = '';
+  document.getElementById('fRequiredSparePart').value = '';
+  clearSparePartRows();
+  addSparePartRow();
+  document.getElementById('fPrice').value = '';
+  document.getElementById('fDowntimeHours').value = '';
+  const now = new Date();
+  now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+  document.getElementById('fStartDateTime').value = now.toISOString().slice(0,16);
+  document.getElementById('fEndDateTime').value = '';
+  document.getElementById('deleteRow').style.display = 'none';
+  document.getElementById('itemModalOverlay').classList.remove('hidden');
+}
+window.openAddModal = openAddModal;
+
+function openEditModal(id){
+  const it = logs.find(i => i.id === id);
+  if(!it) return;
+  editingId = id;
+  document.getElementById('itemModalTitle').textContent = 'Edit Record';
+  clearFieldErrors();
+  document.getElementById('fEquipment').value = it.equipment || '';
+  document.getElementById('fSerialNo').value = it.serialNo || '';
+  document.getElementById('fSite').value = it.site || '';
+  document.getElementById('fProblem').value = it.problem || '';
+  document.getElementById('fAction').value = it.action || '';
+  document.getElementById('fStatus').value = it.status || 'Open';
+  document.getElementById('fTechnician').value = it.technician || '';
+  document.getElementById('fRequiredSparePart').value = it.requiredSparePart || '';
+  clearSparePartRows();
+  if(it.spareParts && it.spareParts.length > 0){
+    it.spareParts.forEach(p => addSparePartRow(p.name, p.partNumber, p.qty));
+  } else if(it.changedSparePart){
+    addSparePartRow(it.changedSparePart, it.partNumber || '', 1);
+  } else {
+    addSparePartRow();
+  }
+  document.getElementById('fPrice').value = it.price || '';
+  document.getElementById('fDowntimeHours').value = it.downtimeHours || '';
+  if(it.timestamp && it.timestamp.toDate){
+    const d = it.timestamp.toDate();
+    d.setMinutes(d.getMinutes() - d.getTimezoneOffset());
+    document.getElementById('fStartDateTime').value = d.toISOString().slice(0,16);
+  } else {
+    document.getElementById('fStartDateTime').value = '';
+  }
+  if(it.endTimestamp && it.endTimestamp.toDate){
+    const d2 = it.endTimestamp.toDate();
+    d2.setMinutes(d2.getMinutes() - d2.getTimezoneOffset());
+    document.getElementById('fEndDateTime').value = d2.toISOString().slice(0,16);
+  } else {
+    document.getElementById('fEndDateTime').value = '';
+  }
+  document.getElementById('deleteRow').style.display = 'flex';
+  document.getElementById('itemModalOverlay').classList.remove('hidden');
+}
+window.openEditModal = openEditModal;
+
+function closeItemModal(){
+  document.getElementById('itemModalOverlay').classList.add('hidden');
+  editingId = null;
+}
+window.closeItemModal = closeItemModal;
+
+function addSparePartRow(name, partNumber, qty){
+  const container = document.getElementById('sparePartsContainer');
+  const row = document.createElement('div');
+  row.className = 'spare-part-row';
+  row.innerHTML = `
+    <input type="text" class="spare-name" placeholder="Part name" value="${name ? escapeHtml(name) : ''}">
+    <input type="text" class="spare-partnumber" placeholder="Part #" value="${partNumber ? escapeHtml(partNumber) : ''}">
+    <input type="number" class="spare-qty" placeholder="Qty" min="1" value="${qty || 1}">
+    <button type="button" class="spare-remove" onclick="this.parentElement.remove()">✕</button>
+  `;
+  container.appendChild(row);
+}
+window.addSparePartRow = addSparePartRow;
+
+function clearSparePartRows(){
+  document.getElementById('sparePartsContainer').innerHTML = '';
+}
+
+function collectSparePartRows(){
+  const rows = document.querySelectorAll('#sparePartsContainer .spare-part-row');
+  const result = [];
+  rows.forEach(row => {
+    const name = row.querySelector('.spare-name').value.trim();
+    const partNumber = row.querySelector('.spare-partnumber').value.trim();
+    const qty = parseInt(row.querySelector('.spare-qty').value, 10) || 1;
+    if(name || partNumber){
+      result.push({ name, partNumber, qty });
+    }
+  });
+  return result;
+}
+
+function sparePartsSummary(spareParts){
+  if(!spareParts || spareParts.length === 0) return '';
+  return spareParts.map(p => `${p.name}${p.partNumber ? ' (PN '+p.partNumber+')' : ''} x${p.qty}`).join('; ');
+}
+
+function recalcDowntime(){
+  const startRaw = document.getElementById('fStartDateTime').value;
+  const endRaw = document.getElementById('fEndDateTime').value;
+  if(startRaw && endRaw){
+    const start = new Date(startRaw);
+    const end = new Date(endRaw);
+    const diffHours = (end - start) / (1000 * 60 * 60);
+    if(diffHours >= 0){
+      document.getElementById('fDowntimeHours').value = Math.round(diffHours * 10) / 10;
+    } else {
+      showToast('End time is before start time — check the dates');
+    }
+  }
+}
+window.recalcDowntime = recalcDowntime;
+
+async function saveItemFromModal(){
+  const equipmentEl = document.getElementById('fEquipment');
+  const serialEl = document.getElementById('fSerialNo');
+  const siteEl = document.getElementById('fSite');
+  const problemEl = document.getElementById('fProblem');
+  const technicianEl = document.getElementById('fTechnician');
+
+  const equipment = equipmentEl.value.trim();
+  const serialNo = serialEl.value.trim();
+  const site = siteEl.value.trim();
+  const problem = problemEl.value.trim();
+  const action = document.getElementById('fAction').value.trim();
+  const status = document.getElementById('fStatus').value;
+  const technician = technicianEl.value.trim();
+  const requiredSparePart = document.getElementById('fRequiredSparePart').value.trim();
+  const spareParts = collectSparePartRows();
+  const priceRaw = document.getElementById('fPrice').value.trim();
+  const downtimeRaw = document.getElementById('fDowntimeHours').value.trim();
+  const startRaw = document.getElementById('fStartDateTime').value;
+  const endRaw = document.getElementById('fEndDateTime').value;
+
+  const requiredFields = [
+    { el: equipmentEl, val: equipment, label: 'Equipment' },
+    { el: serialEl, val: serialNo, label: 'Serial No / Unit #' },
+    { el: siteEl, val: site, label: 'Working Site' },
+    { el: problemEl, val: problem, label: 'Problem' },
+    { el: technicianEl, val: technician, label: 'Technician' },
+  ];
+  const missing = requiredFields.filter(f => !f.val);
+  requiredFields.forEach(f => f.el.classList.toggle('field-missing', !f.val));
+  if(missing.length > 0){
+    showToast('Missing: ' + missing.map(f => f.label).join(', '));
+    return;
+  }
+
+  const price = parseFloat(priceRaw) || 0;
+  const downtimeHours = parseFloat(downtimeRaw) || 0;
+  const { doc, setDoc, addDoc, collection, serverTimestamp } = window.__fs;
+  const timestamp = startRaw ? new Date(startRaw) : serverTimestamp();
+
+  const payload = {
+    equipment, serialNo, site, problem, action, status, technician,
+    requiredSparePart, spareParts,
+    changedSparePart: spareParts.map(p => p.name).join('; '),
+    partNumber: spareParts.map(p => p.partNumber).filter(Boolean).join('; '),
+    price, downtimeHours,
+    timestamp
+  };
+  if(endRaw){
+    payload.endTimestamp = new Date(endRaw);
+  } else if(editingId){
+    payload.endTimestamp = null;
+  }
+
+  try{
+    if(editingId){
+      await setDoc(doc(window.__db, "maintenance_logs", editingId), payload, { merge: true });
+    } else {
+      await addDoc(collection(window.__db, "maintenance_logs"), payload);
+    }
+    closeItemModal();
+    showToast('Saved');
+  }catch(e){
+    showToast('Save failed — check connection');
+    console.error(e);
+  }
+}
+window.saveItemFromModal = saveItemFromModal;
+
+async function deleteCurrentItem(){
+  if(!editingId) return;
+  const { doc, deleteDoc } = window.__fs;
+  try{
+    await deleteDoc(doc(window.__db, "maintenance_logs", editingId));
+    closeItemModal();
+    showToast('Record deleted');
+  }catch(e){
+    showToast('Delete failed');
+  }
+}
+window.deleteCurrentItem = deleteCurrentItem;
+
+function exportLogCSV(){
+  const q = document.getElementById('searchInput').value.trim().toLowerCase();
+  let rows = window.logs || [];
+  if(q){
+    rows = rows.filter(it =>
+      (it.equipment||'').toLowerCase().includes(q) ||
+      (it.serialNo||'').toLowerCase().includes(q) ||
+      (it.site||'').toLowerCase().includes(q) ||
+      (it.problem||'').toLowerCase().includes(q) ||
+      (it.technician||'').toLowerCase().includes(q) ||
+      (it.partNumber||'').toLowerCase().includes(q)
+    );
+  }
+  if(statusFilter !== 'all'){
+    rows = rows.filter(it => (it.status||'Resolved') === statusFilter);
+  }
+  if(rows.length === 0){
+    showToast('No records to export');
+    return;
+  }
+  rows = [...rows].sort((a,b) => {
+    const ta = a.timestamp && a.timestamp.toMillis ? a.timestamp.toMillis() : 0;
+    const tb = b.timestamp && b.timestamp.toMillis ? b.timestamp.toMillis() : 0;
+    return ta - tb;
+  });
+  const header = ['Start Date/Time','End Date/Time','Equipment','Serial No','Working Site','Problem','Action Taken','Status','Technician','Required Spare Part','Spare Parts Used (with Qty)','Price (AED)','Downtime (hours)'];
+  const csvRows = rows.map(it => {
+    const startStr = it.timestamp && it.timestamp.toDate ? it.timestamp.toDate().toLocaleString() : (it.monthLabel || '');
+    const endStr = it.endTimestamp && it.endTimestamp.toDate ? it.endTimestamp.toDate().toLocaleString() : '';
+    const partsStr = sparePartsSummary(it.spareParts) || it.changedSparePart || '';
+    return [
+      startStr, endStr, it.equipment||'', it.serialNo||'', it.site||'', it.problem||'', it.action||'',
+      it.status||'Resolved', it.technician||'', it.requiredSparePart||'', partsStr,
+      (it.price||0).toFixed(2), it.downtimeHours||0
+    ];
+  });
+  const csvEscape = v => `"${String(v).replace(/"/g,'""')}"`;
+  const csv = [header, ...csvRows].map(row => row.map(csvEscape).join(',')).join('\r\n');
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = (q || statusFilter !== 'all' ? 'maintlog-filtered-' : 'maintlog-full-') + new Date().toISOString().slice(0,10) + '.csv';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  showToast(`Exported ${rows.length} records`);
+}
+window.exportLogCSV = exportLogCSV;
+
+let toastTimer = null;
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=> t.classList.remove('show'), 2600);
+}
+
+// ---------- One-time historical import ----------
+function checkImportBanner(){
+  const banner = document.getElementById('importBanner');
+  const alreadyImported = (window.logs || []).some(it => it.__historicalImportMarker === true);
+  if(alreadyImported || !window.__HISTORICAL_RECORDS__ || window.__HISTORICAL_RECORDS__.length === 0){
+    banner.innerHTML = '';
+    return;
+  }
+  banner.innerHTML = `
+    <div style="background:var(--bg-panel);border:1px solid var(--amber);border-radius:10px;padding:14px;margin-bottom:16px;">
+      <div style="font-family:var(--font-mono);font-size:12px;color:var(--amber);margin-bottom:8px;">⚠ Historical log detected — ${window.__HISTORICAL_RECORDS__.length} records from your Excel sheet have not been imported yet.</div>
+      <button class="btn btn-primary" style="width:100%;" onclick="runHistoricalImport()">Import ${window.__HISTORICAL_RECORDS__.length} historical records</button>
+    </div>`;
+}
+window.checkImportBanner = checkImportBanner;
+
+async function runHistoricalImport(){
+  const records = window.__HISTORICAL_RECORDS__ || [];
+  if(records.length === 0) return;
+  if(!confirm(`This will import ${records.length} historical records from your Excel log into the database. This should only be done once. Continue?`)) return;
+
+  const { collection, addDoc, writeBatch, doc } = window.__fs;
+  showToast('Importing... this may take a moment');
+  try{
+    let count = 0;
+    for(const rec of records){
+      await addDoc(collection(window.__db, "maintenance_logs"), {
+        equipment: rec.equipment, serialNo: rec.serialNo, site: rec.site,
+        problem: rec.problem, action: rec.action, status: rec.status,
+        technician: rec.technician, requiredSparePart: rec.requiredSparePart,
+        changedSparePart: rec.changedSparePart, partNumber: rec.partNumber,
+        price: rec.price, downtimeHours: rec.downtimeHours,
+        monthLabel: rec.monthLabel,
+        __historicalImportMarker: (count === 0)
+      });
+      count++;
+    }
+    showToast(`Imported ${count} historical records`);
+    document.getElementById('importBanner').innerHTML = '';
+  }catch(e){
+    showToast('Import failed partway — check connection and try again');
+    console.error(e);
+  }
+}
+window.runHistoricalImport = runHistoricalImport;
+</script>
+
+<div style="text-align:center;font:12px/1.5 system-ui,sans-serif;opacity:.6;padding:16px 16px 24px;">&copy; 2026 Marwan Shehata. All rights reserved. &middot; Demo version with fictional sample data.</div>
+</body>
+</html>
